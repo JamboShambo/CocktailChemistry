@@ -1,0 +1,165 @@
+
+<html lang="en">
+
+<head>
+  <!-- Required meta tags  https://oods00189802.s3-eu-west-1.amazonaws.com/Angular/Cocktail+Chemistry+Logo.png -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" href="../favicon.ico" type="" sizes="16x16">
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Bitter" />
+  <style>
+    @import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto');
+  </style>
+  <title>Cocktail Chemistry</title>
+</head>
+
+<body>
+  <header>
+    <nav id="navBar" class="navbar navbar-expand-lg navbar-light">
+      <a class="navbar-brand" href="#">
+        <img id="logo"src="https://i.ibb.co/fDjGFzt/Cocktail-Chemistry-Logo.png" alt="image"
+          class="d-inline-block align-top">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Shop</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About Us</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <main class="bg">
+    <div id="cocktailFinder" class="container">
+      <h1 id="h1Name">Cocktail Finder</h1>
+      <form>
+        <div class="form-group">
+          <input type="text" name="cocktail-name" class="form-control" #cocktailname placeholder="Martini">
+        </div>
+        <button id="btnName" (click)="getCocktailDetails(cocktailname.value)" type="submit" class="btn btn-primary">Get
+          Cocktail name</button>
+          <button id="btnName" (click)="getCocktailRandom()" type="submit" class="btn btn-primary">Get
+            Random Cocktail</button>
+      </form>
+
+      <div id="dataOutputBox" class="row mt=4 p=4" *ngIf="cocktailData">
+        <ul class="list-unstyled">
+          <li *ngFor="let drinks of cocktailData.drinks">
+            <div class="container">
+              <h3>{{cocktailData.Error}}</h3>
+              <li id="nameH1"> <img id="cocktailIMG" src="{{drinks.strDrinkThumb}}"> {{drinks.strDrink}}  </li>
+              <li id="method"> Method </li>
+              <li id="strIngredient1"> {{drinks.strInstructions}} </li>
+              <li id="served"> Served </li>
+              <li id="strIngredient1"> {{drinks.strGlass}} </li>
+              <li id="indgredient"> Ingredients </li>
+              <ol>
+              <li id="strIngredient1"> {{drinks.strIngredient1}} {{drinks.strMeasure1}} </li>
+              <li id="strIngredient1"> {{drinks.strIngredient2}} {{drinks.strMeasure2}} </li>
+              <li id="strIngredient1"> {{drinks.strIngredient3}} {{drinks.strMeasure3}} </li>
+              <li id="strIngredient1"> {{drinks.strIngredient4}} {{drinks.strMeasure4}}</li>
+              <li id="strIngredient1"> {{drinks.strIngredient5}} {{drinks.strMeasure5}}</li>
+              <li id="strIngredient1last"> {{drinks.strIngredient6}} {{drinks.strMeasure6}}</li>
+              </ol>
+            </div>
+
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div *ngFor="let drinks of cocktailData.drinks" class="container" id="imageroll">
+
+    </div> 
+
+    <app-cocktaillist> </app-cocktaillist>
+
+
+  </main>
+  <footer class="page-footer font-small blue pt-2">
+    <div class="container-fluid text-center text-md-left">
+      <div class="row">
+        <div class="col-md-4 mt-md-0 mt-3">
+          <h5 class="text-uppercase">Social Media</h5>
+          <a href="#" class="fa fa-twitter"></a>
+          <a href="#" class="fa fa-google"></a>
+          <a href="#" class="fa fa-linkedin"></a>
+          <a href="#" class="fa fa-youtube"></a>
+          <a href="#" class="fa fa-instagram"></a>
+          <a href="#" class="fa fa-pinterest"></a>
+
+        </div>
+        <hr>
+        <div class="col-md-3 mb-md-0 mb-3">
+          <h5 class="text-uppercase">Links</h5>
+
+          <ul class="list-unstyled">
+            <li>
+              <a class="footLink" href="Home.html">Home</a>
+            </li>
+            <li>
+              <a class="footLink" href="shop.html">Shop</a>
+            </li>
+            <li>
+              <a class="footLink" href="contact.html">Contact</a>
+            </li>
+            <li>
+              <a class="footLink" href="about.html">About Us</a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+    <div class="footer-copyright text-md-center py-">© 2020 Copyright: Cocktail Chemistry
+    </div> 
+
+
+
+  </footer>
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="/__/firebase/7.14.2/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="/__/firebase/7.14.2/firebase-analytics.js"></script>
+
+<!-- Initialize Firebase -->
+<script src="/__/firebase/init.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyDpXa1CFE1Hfa9cawUwABh4rflqC9nMmBc",
+    authDomain: "carsalenosql.firebaseapp.com",
+    databaseURL: "https://carsalenosql.firebaseio.com",
+    projectId: "carsalenosql",
+    storageBucket: "carsalenosql.appspot.com",
+    messagingSenderId: "967115749858",
+    appId: "1:967115749858:web:6c17cc2127a1754110e1bb",
+    measurementId: "G-DEFEVEFQ81"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+
+</body>
+
+</html>

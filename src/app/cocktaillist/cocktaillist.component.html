@@ -1,0 +1,24 @@
+<div class="container">
+<h1 id="h1name">Your Favourite Cocktails</h1>
+<div>  <!-- removed button ngIf gos inside the div on this line  -->
+<form>
+    <ul class="list-unstyled">
+
+    <li> <label>Name</label> </li>
+    <li> <input type="text" class="form-control" name="name" placeholder="Enter Name" #name> </li>
+    <br>
+    <li><label>Image</label></li>
+
+    <li><input type="text" name="image" class="form-control" placeholder="Enter Link to Image" #image></li>
+    <br>
+    <li> <button id="btn1" class="btn btn-primary" type="submit" (click)="addTheCocktail(name.value,
+        image.value)">Add the Cocktail</button> </li>
+
+    </ul>
+</form>
+</div>
+
+<div class="container">
+<app-cocktail *ngFor="let cocktailDataDatabase of cocktailsDataDatabase" [cocktailDataDatabase]="cocktailDataDatabase"></app-cocktail>
+</div>
+</div>

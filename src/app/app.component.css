@@ -1,0 +1,197 @@
+
+
+/* Nav */
+
+/*colours
+#1A1A1D Blackgrey
+#4E4E50 Grey
+#6F2232 dull red
+#950740 dark purple
+#C3073F poping red
+border-right: groove 0.5em #C3073F;
+    border-left: groove 0.5em #C3073F;
+*/
+
+@media only screen and (min-width: 768px) {
+  
+    
+}/* end of screen changes*/
+
+/* backgroud image */
+.bg {
+  background-color: #DFE0DF;
+}
+  /* general */
+
+  html{
+    font-size:100%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin: auto;
+  }
+main{
+  font-family: "bitter";
+  align-content: center; 
+  font-weight: 700;
+  min-height: 37.2rem;
+}
+body{
+  height: 100%;
+  width: 100%;
+}
+
+/* header */
+.navbar-toggler-icon, .nav-item{
+  font-size: x-large;
+  font-weight: 700;
+}
+#logo{
+  height: 8rem;
+  width: 8rem;
+}
+#h1Name { 
+  padding-top: 1%;
+  font-family: Bitter;
+  font-size: 24px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 700;
+  line-height: 26.4px; 
+  text-align: center;
+  text-decoration: underline;
+}
+header{
+    background-color: #ffbd59;
+    border-bottom: groove 0.2em black;
+    border-top: groove 0.2em black;
+    color: black;
+}
+#navBar{
+  color: black;
+}
+.navbar-toggler{
+  border-color: #ffbd59;
+}
+
+/* Search name / random */
+#cocktailFinder{
+  width: 100%;
+}
+#dataOutputBox{
+  background-color: white;
+  border-top: groove 0.2em black;
+  border-left: groove 0.2em black;
+  border-right: groove 0.2em black;
+  border-bottom: groove 0.2em black;
+
+}
+#nameH1{
+  font-size: 36px;
+}
+
+#cocktailIMG{
+    height: 30%;
+    width: 30%;
+    margin: 2%;
+    font-size: xx-large;
+    border-left: solid 0.2em #ffbd59;
+}
+#btnName{
+    margin-right: 1%;
+    margin-bottom: 1%;
+    background-color: #339933;
+    color: black;
+    font-weight: 700;
+    border: black;
+    font-family: Bitter;
+
+}
+
+#indgredient,#method,#served{
+  text-decoration: underline;
+  font-style: italic;
+  border-left: solid 0.2em #ffbd59;
+}
+
+#ingredientID,#strIngredient1,#indgredient,#method,#served,#nameh1,#strIngredient1last{
+  margin: 2%;
+}
+
+/*image roll*/
+#imagerollUL{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #DFE0DF;
+  text-align:center;
+}
+
+.imageRollLI {
+  float: left;
+}
+
+/* Footer */
+footer
+{
+
+    padding-left: 3em;
+    padding-right: 3em;
+    float: left;
+    width: 100%;
+    color: black;
+    background-color: #ffbd59;
+    border-top: groove 0.2em black;
+    border-bottom: groove 0.2em black;
+
+}
+
+.footLink{
+    color: black;
+} 
+
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+}
+
+.fa:hover {
+  opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+.fa-google {
+  background: #dd4b39;
+  color: white;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
+.fa-pinterest {
+  background: #cb2027;
+  color: white;
+}

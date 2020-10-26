@@ -1,0 +1,17 @@
+{
+  "hosting": {
+    "site": "cocktail-chemistry",
+    "public": "dist/AngularProject",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}

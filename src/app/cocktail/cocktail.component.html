@@ -1,0 +1,15 @@
+<div class="container">
+    
+        <ul class="list-unstyled">       
+
+        <li id="id1">
+            <img id="img1" src="{{cocktailDataDatabase.strDrinkThumb}}" [style.width.px]='250' />
+            {{cocktailDataDatabase.strDrink}}
+        </li>
+
+        <li>         
+            <button class="btn btn-primary" id="btn1" type="submit" (click)="deleteCocktail(cocktailDataDatabase.id)">Delete Cocktail</button>
+        </li>
+        </ul>
+</div>
+<br>
